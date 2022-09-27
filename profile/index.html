@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <title>
+        Megazone - Admin
+    </title>
+
+    <meta name="keywords" content="Kuberix - kuberix-flow-ui">
+    <meta name="description" content="Kuberix - kuberix-flow-ui">
+
+    <meta itemprop="name" content="Kuberix - kuberix-flow-ui">
+    <meta itemprop="description" content="Kuberix - kuberix-flow-ui">
+    <meta itemprop="image" content="">
+
+    <meta name="twitter:card" content="Kuberix">
+    <meta name="twitter:site" content="@Kuberix">
+    <meta name="twitter:title" content="Kuberix - kuberix-flow-ui">
+    <meta name="twitter:description" content="Kuberix - kuberix-flow-ui">
+    <meta name="twitter:creator" content="@Kuberix">
+    <meta name="twitter:image" content="">
+
+    <meta property="fb:app_id" content="655968634437471">
+    <meta property="og:title" content="Kuberix" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="Kuberix - kuberix-flow-ui" />
+    <meta property="og:site_name" content="Kuberix" />
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+
+    <link href="../assets/css/black-dashboard.min.css?v=1.1.1" rel="stylesheet" />
+
+    <link href="../assets/demo/demo.css" rel="stylesheet" />
+    <style>
+        .datatable_enviroment, .card, .tab-content{
+            width: 100% !important;
+        }
+        .card{
+    
+        }
+    </style>
+</head>
+
+<body class="sidebar-mini ">
+    <div class="wrapper">
+        <div class="navbar-minimize-fixed">
+            <button class="minimize-sidebar btn btn-link btn-just-icon">
+                <i class="tim-icons icon-align-center visible-on-sidebar-regular text-muted"></i>
+                <i class="tim-icons icon-bullet-list-67 visible-on-sidebar-mini text-muted"></i>
+            </button>
+        </div>
+        <div class="sidebar">
+
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <a href="javascript:void(0)" class="simple-text logo-mini">
+                        MGZ
+                    </a>
+                    <a href="javascript:void(0)" class="simple-text logo-normal">
+                        Megazone VDC
+                    </a>
+                </div>
+                <ul class="nav">
+                    <li class="active">
+                        <a href="../index.html">
+                            <i class="tim-icons icon-chart-pie-36"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="tim-icons icon-calendar-60"></i>
+                            <p>Run Status</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../profile.html">
+                            <i class="tim-icons icon-badge"></i>
+                            <p>Profiles</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
+                <div class="container-fluid">
+                    <div class="navbar-wrapper">
+                        <div class="navbar-minimize d-inline">
+                            <button class="minimize-sidebar btn btn-link btn-just-icon" rel="tooltip"
+                                data-original-title="Sidebar toggle" data-placement="right">
+                                <i class="tim-icons icon-align-center visible-on-sidebar-regular"></i>
+                                <i class="tim-icons icon-bullet-list-67 visible-on-sidebar-mini"></i>
+                            </button>
+                        </div>
+                        <div class="navbar-toggle d-inline">
+                            <button type="button" class="navbar-toggler">
+                                <span class="navbar-toggler-bar bar1"></span>
+                                <span class="navbar-toggler-bar bar2"></span>
+                                <span class="navbar-toggler-bar bar3"></span>
+                            </button>
+                        </div>
+                        <a class="navbar-brand" href="javascript:void(0)">Megazone Admin</a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                        <span class="navbar-toggler-bar navbar-kebab"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navigation">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="search-bar input-group">
+                                <button class="btn btn-link" id="search-button" data-toggle="modal"
+                                    data-target="#searchModal"><i class="tim-icons icon-zoom-split"></i>
+                                    <span class="d-lg-none d-md-block">Search</span>
+                                </button>
+                            </li>
+                            <li class="dropdown nav-item">
+                                <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                                    <div class="notification d-none d-lg-block d-xl-block"></div>
+                                    <i class="tim-icons icon-sound-wave"></i>
+                                    <p class="d-lg-none">
+                                        Notifications
+                                    </p>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
+                                    <li class="nav-link">
+                                        <a href="#" class="nav-item dropdown-item">Mike John responded to your email</a>
+                                    </li>
+                                    <li class="nav-link">
+                                        <a href="javascript:void(0)" class="nav-item dropdown-item">You have 5 more
+                                            tasks</a>
+                                    </li>
+                                    <li class="nav-link">
+                                        <a href="javascript:void(0)" class="nav-item dropdown-item">Your friend Michael
+                                            is in town</a>
+                                    </li>
+                                    <li class="nav-link">
+                                        <a href="javascript:void(0)" class="nav-item dropdown-item">Another
+                                            notification</a>
+                                    </li>
+                                    <li class="nav-link">
+                                        <a href="javascript:void(0)" class="nav-item dropdown-item">Another one</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown nav-item">
+                                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                                    <div class="photo">
+                                        <img src="../assets/img/mike.jpg" alt="Profile Photo">
+                                    </div>
+                                    <b class="caret d-none d-lg-block d-xl-block"></b>
+                                    <p class="d-lg-none">
+                                        Log out
+                                    </p>
+                                </a>
+                                <ul class="dropdown-menu dropdown-navbar">
+                                    <li class="nav-link">
+                                        <a href="javascript:void(0)" class="nav-item dropdown-item">Profile</a>
+                                    </li>
+                                    <li class="nav-link">
+                                        <a href="javascript:void(0)" class="nav-item dropdown-item">Settings</a>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li class="nav-link">
+                                        <a href="javascript:void(0)" class="nav-item dropdown-item">Log out</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="separator d-lg-none"></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog"
+                aria-labelledby="searchModal" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <i class="tim-icons icon-simple-remove"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="row">
+                    <div class="col-lg-12">
+                     
+                                <div class="tools float-right">
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-link dropdown-toggle btn-icon"
+                                            data-toggle="dropdown">
+                                            <i class="tim-icons icon-settings-gear-63"></i>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" href="#pablo">Action</a>
+                                            <a class="dropdown-item" href="#pablo">Another action</a>
+                                            <a class="dropdown-item" href="#pablo">Something else</a>
+                                            <a class="dropdown-item text-danger" href="#pablo">Remove Data</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 class="card-title"><i class="tim-icons icon-calendar-60"></i> User Profile</h3>
+                            </div>
+                                <ul class="nav nav-pills nav-pills-primary">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#run_environment">
+                                            Run Environments
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#run_group">
+                                            Groups
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#run_sshkey">
+                                            SSH Keys
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#run_amazone_key">
+                                            Amazon Keys
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#run_google_key">
+                                            Google Keys
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#run_github">
+                                            GitHub
+                                        </a>
+                                    </li>
+
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#run_change_password">
+                                            Change Password
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#run_admin">
+                                            Admin
+                                        </a>
+                                    </li>
+                                    
+
+                                    
+                                </ul>
+                                <div class="tab-content tab-space">
+                                    <div class="tab-pane active" id="run_environment">
+
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h3 class="card-category">Run Enviroments</h3>
+                                                    <h3 class="card-title text-right"> 
+                                                        <button class="btn btn-primary">Add enviroment</button>    
+                                                    </h3>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length"
+                                                                            aria-controls="datatable"
+                                                                            class="custom-select custom-select-sm form-control form-control-sm">
+                                                                            <option value="10">10</option>
+                                                                            <option value="25">25</option>
+                                                                            <option value="50">50</option>
+                                                                            <option value="-1">All</option>
+                                                                        </select> entries</label></div>
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <div id="datatable_filter" class="dataTables_filter"><label><input type="search"
+                                                                            class="form-control form-control-sm" placeholder="Search records"
+                                                                            aria-controls="datatable"></label></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <table id="datatable_enviroment" class="table table-striped dataTable dtr-inline collapsed datatable_enviroment" role="grid"
+                                                                    aria-describedby="datatable_info" style="width: 1424px;">
+                                                                    <thead>
+                                                                        <tr role="row">
+                                                                            <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                                style="width: 286px;" aria-sort="ascending"
+                                                                                aria-label="Name: activate to sort column descending">Profile Name</th>
+                                                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                                style="width: 433px;" aria-label="Position: activate to sort column ascending">Type
+                                                                            </th>
+                                                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                                style="width: 211px;" aria-label="Office: activate to sort column ascending">Details</th>
+                                                                            
+                                                                            <th class="sorting_desc_disabled sorting_asc_disabled text-right sorting" tabindex="0"
+                                                                                aria-controls="datatable" rowspan="1" colspan="1" style="width: 210px;"
+                                                                                aria-label="Actions: activate to sort column ascending">Actions</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                
+                                                                        <tr role="row" class="odd">
+                                                                            <td tabindex="0" class="sorting_1">Airi Satou</td>
+                                                                            <td>Accountant</td>
+                                                                            <td>Tokyo</td>
+                                                                            <td class="text-right">
+                                                                            
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i
+                                                                                        class="tim-icons icon-pencil"></i></a>
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i
+                                                                                        class="tim-icons icon-simple-remove"></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr role="row" class="even">
+                                                                            <td class="sorting_1" tabindex="0">Angelica Ramos</td>
+                                                                            <td>Chief Executive Officer (CEO)</td>
+                                                                            <td>London</td>
+                                                                            <td class="text-right">
+                                                                            
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i
+                                                                                        class="tim-icons icon-pencil"></i></a>
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i
+                                                                                        class="tim-icons icon-simple-remove"></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr role="row" class="odd">
+                                                                            <td tabindex="0" class="sorting_1">Ashton Cox</td>
+                                                                            <td>Junior Technical Author</td>
+                                                                            <td>San Francisco</td>
+                                                                            <td class="text-right">
+                                                                            
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i
+                                                                                        class="tim-icons icon-pencil"></i></a>
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i
+                                                                                        class="tim-icons icon-simple-remove"></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr role="row" class="even">
+                                                                            <td class="sorting_1" tabindex="0">Bradley Greer</td>
+                                                                            <td>Software Engineer</td>
+                                                                            <td>London</td>
+                                                                            <td class="text-right"">
+                                                                            
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i
+                                                                                        class="tim-icons icon-pencil"></i></a>
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i
+                                                                                        class="tim-icons icon-simple-remove"></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr role="row" class="odd">
+                                                                            <td class="sorting_1" tabindex="0">Brenden Wagner</td>
+                                                                            <td>Software Engineer</td>
+                                                                            <td>San Francisco</td>
+                                                                            <td class="text-right">
+                                                                            
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i
+                                                                                        class="tim-icons icon-pencil"></i></a>
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i
+                                                                                        class="tim-icons icon-simple-remove"></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr role="row" class="even">
+                                                                            <td tabindex="0" class="sorting_1">Brielle Williamson</td>
+                                                                            <td>Integration Specialist</td>
+                                                                            <td>New York</td>
+                                                                            <td class="text-right">
+                                                                               
+                                                                                <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
+                                                                                        class="tim-icons icon-pencil"></i></a>
+                                                                                <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
+                                                                                        class="tim-icons icon-simple-remove"></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr role="row" class="odd">
+                                                                            <td class="sorting_1" tabindex="0">Caesar Vance</td>
+                                                                            <td>Pre-Sales Support</td>
+                                                                            <td>New York</td>
+                                                                            <td class="text-right">
+                                                                               
+                                                                                <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
+                                                                                        class="tim-icons icon-pencil"></i></a>
+                                                                                <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
+                                                                                        class="tim-icons icon-simple-remove"></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr role="row" class="even">
+                                                                            <td tabindex="0" class="sorting_1">Cedric Kelly</td>
+                                                                            <td>Senior Javascript Developer</td>
+                                                                            <td>Edinburgh</td>
+                                                                            <td class="text-right">
+                                                                               
+                                                                                <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
+                                                                                        class="tim-icons icon-pencil"></i></a>
+                                                                                <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
+                                                                                        class="tim-icons icon-simple-remove"></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr role="row" class="odd">
+                                                                            <td class="sorting_1" tabindex="0">Charde Marshall</td>
+                                                                            <td>Regional Director</td>
+                                                                            <td>San Francisco</td>
+                                                                            <td class="text-right">
+                                                                               
+                                                                                <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
+                                                                                        class="tim-icons icon-pencil"></i></a>
+                                                                                <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
+                                                                                        class="tim-icons icon-simple-remove"></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr role="row" class="even">
+                                                                            <td tabindex="0" class="sorting_1">Colleen Hurst</td>
+                                                                            <td>Javascript Developer</td>
+                                                                            <td>San Francisco</td>
+                                                                            <td class="text-right">
+                                                                               
+                                                                                <a href="javascript:void(0)" class="btn btn-link btn-warning btn-icon btn-sm edit"><i
+                                                                                        class="tim-icons icon-pencil"></i></a>
+                                                                                <a href="javascript:void(0)" class="btn btn-link btn-danger btn-icon btn-sm remove"><i
+                                                                                        class="tim-icons icon-simple-remove"></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                    <tfoot>
+                                                                        <tr>
+                                                                            <th rowspan="1" colspan="1">Name</th>
+                                                                            <th rowspan="1" colspan="1">Position</th>
+                                                                            <th rowspan="1" colspan="1">Office</th>
+                                                                            <th class="disabled-sorting text-right" rowspan="1" colspan="1">
+                                                                                Actions</th>
+                                                                        </tr>
+                                                                    </tfoot>
+                                                                </table>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-md-5">
+                                                                <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 10 of 42
+                                                                    entries</div>
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-7">
+                                                                <div class="dataTables_paginate paging_full_numbers" id="datatable_paginate">
+                                                                    <ul class="pagination">
+                                                                        <li class="paginate_button page-item first disabled" id="datatable_first"><a href="#"
+                                                                                aria-controls="datatable" data-dt-idx="0" tabindex="0" class="page-link">First</a></li>
+                                                                        <li class="paginate_button page-item previous disabled" id="datatable_previous"><a href="#"
+                                                                                aria-controls="datatable" data-dt-idx="1" tabindex="0" class="page-link">Previous</a>
+                                                                        </li>
+                                                                        <li class="paginate_button page-item active"><a href="#" aria-controls="datatable"
+                                                                                data-dt-idx="2" tabindex="0" class="page-link">1</a></li>
+                                                                        <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="3"
+                                                                                tabindex="0" class="page-link">2</a></li>
+                                                                        <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="4"
+                                                                                tabindex="0" class="page-link">3</a></li>
+                                                                        <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="5"
+                                                                                tabindex="0" class="page-link">4</a></li>
+                                                                        <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="6"
+                                                                                tabindex="0" class="page-link">5</a></li>
+                                                                        <li class="paginate_button page-item next" id="datatable_next"><a href="#"
+                                                                                aria-controls="datatable" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
+                                                                        <li class="paginate_button page-item last" id="datatable_last"><a href="#"
+                                                                                aria-controls="datatable" data-dt-idx="8" tabindex="0" class="page-link">Last</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h3 class="card-category">Public Run Environment Templates</h3>
+                                                    <h3 class="card-title text-right"> 
+                                                        <button class="btn btn-primary">Add Public Profile</button>    
+                                                    </h3>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length"
+                                                                            aria-controls="datatable"
+                                                                            class="custom-select custom-select-sm form-control form-control-sm">
+                                                                            <option value="10">10</option>
+                                                                            <option value="25">25</option>
+                                                                            <option value="50">50</option>
+                                                                            <option value="-1">All</option>
+                                                                        </select> entries</label></div>
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-6">
+                                                                <div id="datatable_filter" class="dataTables_filter"><label><input type="search"
+                                                                            class="form-control form-control-sm" placeholder="Search records"
+                                                                            aria-controls="datatable"></label></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <table id="datatable_enviroment" class="table table-striped dataTable dtr-inline collapsed datatable_enviroment" role="grid"
+                                                                    aria-describedby="datatable_info" style="width: 1424px;">
+                                                                    <thead>
+                                                                        <tr role="row">
+                                                                            <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                                style="width: 286px;" aria-sort="ascending"
+                                                                                aria-label="Name: activate to sort column descending">Profile Name</th>
+                                                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                                style="width: 433px;" aria-label="Position: activate to sort column ascending">Type
+                                                                            </th>
+                                                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                                style="width: 211px;" aria-label="Office: activate to sort column ascending">Details</th>
+                                                                            
+                                                                            <th class="sorting_desc_disabled sorting_asc_disabled text-right sorting" tabindex="0"
+                                                                                aria-controls="datatable" rowspan="1" colspan="1" style="width: 210px;"
+                                                                                aria-label="Actions: activate to sort column ascending">Actions</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                
+                                                                        <tr role="row" class="odd">
+                                                                            <td tabindex="0" class="sorting_1">Airi Satou</td>
+                                                                            <td>Accountant</td>
+                                                                            <td>Tokyo</td>
+                                                                            <td class="text-right">
+                                                                            
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i
+                                                                                        class="tim-icons icon-pencil"></i></a>
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i
+                                                                                        class="tim-icons icon-simple-remove"></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                       
+                                                                    </tbody>
+                                                                    <tfoot>
+                                                                        <tr>
+                                                                            <th rowspan="1" colspan="1">Name</th>
+                                                                            <th rowspan="1" colspan="1">Position</th>
+                                                                            <th rowspan="1" colspan="1">Office</th>
+                                                                            <th class="disabled-sorting text-right" rowspan="1" colspan="1">
+                                                                                Actions</th>
+                                                                        </tr>
+                                                                    </tfoot>
+                                                                </table>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-md-5">
+                                                                <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 10 of 42
+                                                                    entries</div>
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-7">
+                                                                <div class="dataTables_paginate paging_full_numbers" id="datatable_paginate">
+                                                                    <ul class="pagination">
+                                                                        <li class="paginate_button page-item first disabled" id="datatable_first"><a href="#"
+                                                                                aria-controls="datatable" data-dt-idx="0" tabindex="0" class="page-link">First</a></li>
+                                                                        <li class="paginate_button page-item previous disabled" id="datatable_previous"><a href="#"
+                                                                                aria-controls="datatable" data-dt-idx="1" tabindex="0" class="page-link">Previous</a>
+                                                                        </li>
+                                                                        <li class="paginate_button page-item active"><a href="#" aria-controls="datatable"
+                                                                                data-dt-idx="2" tabindex="0" class="page-link">1</a></li>
+                                                                        <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="3"
+                                                                                tabindex="0" class="page-link">2</a></li>
+                                                                        <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="4"
+                                                                                tabindex="0" class="page-link">3</a></li>
+                                                                        <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="5"
+                                                                                tabindex="0" class="page-link">4</a></li>
+                                                                        <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="6"
+                                                                                tabindex="0" class="page-link">5</a></li>
+                                                                        <li class="paginate_button page-item next" id="datatable_next"><a href="#"
+                                                                                aria-controls="datatable" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
+                                                                        <li class="paginate_button page-item last" id="datatable_last"><a href="#"
+                                                                                aria-controls="datatable" data-dt-idx="8" tabindex="0" class="page-link">Last</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                    </div>
+                                    <div class="tab-pane" id="run_group">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-category"> Groups</h3>
+                                                <h3 class="card-title text-right"> 
+                                                    <button class="btn btn-primary">Create a Group</button>    
+                                                </h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-6">
+                                                            <div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length"
+                                                                        aria-controls="datatable"
+                                                                        class="custom-select custom-select-sm form-control form-control-sm">
+                                                                        <option value="10">10</option>
+                                                                        <option value="25">25</option>
+                                                                        <option value="50">50</option>
+                                                                        <option value="-1">All</option>
+                                                                    </select> entries</label></div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-6">
+                                                            <div id="datatable_filter" class="dataTables_filter"><label><input type="search"
+                                                                        class="form-control form-control-sm" placeholder="Search records"
+                                                                        aria-controls="datatable"></label></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <table id="datatable_enviroment" class="table table-striped dataTable dtr-inline collapsed datatable_enviroment" role="grid"
+                                                                aria-describedby="datatable_info" style="width: 1424px;">
+                                                                <thead>
+                                                                    <tr role="row">
+                                                                        <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                            style="width: 286px;" aria-sort="ascending"
+                                                                            aria-label="Name: activate to sort column descending">Profile Name</th>
+                                                                        <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                            style="width: 433px;" aria-label="Position: activate to sort column ascending">Type
+                                                                        </th>
+                                                                        <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                            style="width: 211px;" aria-label="Office: activate to sort column ascending">Details</th>
+                                                                        
+                                                                        <th class="sorting_desc_disabled sorting_asc_disabled text-right sorting" tabindex="0"
+                                                                            aria-controls="datatable" rowspan="1" colspan="1" style="width: 210px;"
+                                                                            aria-label="Actions: activate to sort column ascending">Actions</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                            
+                                                                    <tr role="row" class="odd">
+                                                                        <td tabindex="0" class="sorting_1">Airi Satou</td>
+                                                                        <td>Accountant</td>
+                                                                        <td>Tokyo</td>
+                                                                        <td class="text-right">
+                                                                        
+                                                                            <a href="javascript:void(0)"
+                                                                                class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i
+                                                                                    class="tim-icons icon-pencil"></i></a>
+                                                                            <a href="javascript:void(0)"
+                                                                                class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i
+                                                                                    class="tim-icons icon-simple-remove"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                   
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <th rowspan="1" colspan="1">Name</th>
+                                                                        <th rowspan="1" colspan="1">Position</th>
+                                                                        <th rowspan="1" colspan="1">Office</th>
+                                                                        <th class="disabled-sorting text-right" rowspan="1" colspan="1">
+                                                                            Actions</th>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-5">
+                                                            <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 10 of 42
+                                                                entries</div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <div class="dataTables_paginate paging_full_numbers" id="datatable_paginate">
+                                                                <ul class="pagination">
+                                                                    <li class="paginate_button page-item first disabled" id="datatable_first"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="0" tabindex="0" class="page-link">First</a></li>
+                                                                    <li class="paginate_button page-item previous disabled" id="datatable_previous"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="1" tabindex="0" class="page-link">Previous</a>
+                                                                    </li>
+                                                                    <li class="paginate_button page-item active"><a href="#" aria-controls="datatable"
+                                                                            data-dt-idx="2" tabindex="0" class="page-link">1</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="3"
+                                                                            tabindex="0" class="page-link">2</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="4"
+                                                                            tabindex="0" class="page-link">3</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="5"
+                                                                            tabindex="0" class="page-link">4</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="6"
+                                                                            tabindex="0" class="page-link">5</a></li>
+                                                                    <li class="paginate_button page-item next" id="datatable_next"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
+                                                                    <li class="paginate_button page-item last" id="datatable_last"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="8" tabindex="0" class="page-link">Last</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="run_sshkey">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-category">  SSH Keys</h3>
+                                                <h3 class="card-title text-right"> 
+                                                    <button class="btn btn-primary">Add SSH Key</button>    
+                                                </h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-6">
+                                                            <div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length"
+                                                                        aria-controls="datatable"
+                                                                        class="custom-select custom-select-sm form-control form-control-sm">
+                                                                        <option value="10">10</option>
+                                                                        <option value="25">25</option>
+                                                                        <option value="50">50</option>
+                                                                        <option value="-1">All</option>
+                                                                    </select> entries</label></div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-6">
+                                                            <div id="datatable_filter" class="dataTables_filter"><label><input type="search"
+                                                                        class="form-control form-control-sm" placeholder="Search records"
+                                                                        aria-controls="datatable"></label></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <table id="datatable_enviroment" class="table table-striped dataTable dtr-inline collapsed datatable_enviroment" role="grid"
+                                                                aria-describedby="datatable_info" style="width: 1424px;">
+                                                                <thead>
+                                                                    <tr role="row">
+                                                                        <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                            style="width: 286px;" aria-sort="ascending"
+                                                                            aria-label="Name: activate to sort column descending">Profile Name</th>
+                                                                        <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                            style="width: 433px;" aria-label="Position: activate to sort column ascending">Type
+                                                                        </th>
+                                                                        <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                            style="width: 211px;" aria-label="Office: activate to sort column ascending">Details</th>
+                                                                        
+                                                                        <th class="sorting_desc_disabled sorting_asc_disabled text-right sorting" tabindex="0"
+                                                                            aria-controls="datatable" rowspan="1" colspan="1" style="width: 210px;"
+                                                                            aria-label="Actions: activate to sort column ascending">Actions</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                            
+                                                                    <tr role="row" class="odd">
+                                                                        <td tabindex="0" class="sorting_1">Airi Satou</td>
+                                                                        <td>Accountant</td>
+                                                                        <td>Tokyo</td>
+                                                                        <td class="text-right">
+                                                                        
+                                                                            <a href="javascript:void(0)"
+                                                                                class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i
+                                                                                    class="tim-icons icon-pencil"></i></a>
+                                                                            <a href="javascript:void(0)"
+                                                                                class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i
+                                                                                    class="tim-icons icon-simple-remove"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                   
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <th rowspan="1" colspan="1">Name</th>
+                                                                        <th rowspan="1" colspan="1">Position</th>
+                                                                        <th rowspan="1" colspan="1">Office</th>
+                                                                        <th class="disabled-sorting text-right" rowspan="1" colspan="1">
+                                                                            Actions</th>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-5">
+                                                            <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 10 of 42
+                                                                entries</div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <div class="dataTables_paginate paging_full_numbers" id="datatable_paginate">
+                                                                <ul class="pagination">
+                                                                    <li class="paginate_button page-item first disabled" id="datatable_first"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="0" tabindex="0" class="page-link">First</a></li>
+                                                                    <li class="paginate_button page-item previous disabled" id="datatable_previous"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="1" tabindex="0" class="page-link">Previous</a>
+                                                                    </li>
+                                                                    <li class="paginate_button page-item active"><a href="#" aria-controls="datatable"
+                                                                            data-dt-idx="2" tabindex="0" class="page-link">1</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="3"
+                                                                            tabindex="0" class="page-link">2</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="4"
+                                                                            tabindex="0" class="page-link">3</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="5"
+                                                                            tabindex="0" class="page-link">4</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="6"
+                                                                            tabindex="0" class="page-link">5</a></li>
+                                                                    <li class="paginate_button page-item next" id="datatable_next"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
+                                                                    <li class="paginate_button page-item last" id="datatable_last"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="8" tabindex="0" class="page-link">Last</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="run_amazone_key">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-category">  Amazon Keys</h3>
+                                                <h3 class="card-title text-right"> 
+                                                    <button class="btn btn-primary">Add Amazon Key</button>    
+                                                </h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-6">
+                                                            <div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length"
+                                                                        aria-controls="datatable"
+                                                                        class="custom-select custom-select-sm form-control form-control-sm">
+                                                                        <option value="10">10</option>
+                                                                        <option value="25">25</option>
+                                                                        <option value="50">50</option>
+                                                                        <option value="-1">All</option>
+                                                                    </select> entries</label></div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-6">
+                                                            <div id="datatable_filter" class="dataTables_filter"><label><input type="search"
+                                                                        class="form-control form-control-sm" placeholder="Search records"
+                                                                        aria-controls="datatable"></label></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <table id="datatable_enviroment" class="table table-striped dataTable dtr-inline collapsed datatable_enviroment" role="grid"
+                                                                aria-describedby="datatable_info" style="width: 1424px;">
+                                                                <thead>
+                                                                    <tr role="row">
+                                                                        <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                            style="width: 286px;" aria-sort="ascending"
+                                                                            aria-label="Name: activate to sort column descending">Profile Name</th>
+                                                                        <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                            style="width: 433px;" aria-label="Position: activate to sort column ascending">Type
+                                                                        </th>
+                                                                        <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                            style="width: 211px;" aria-label="Office: activate to sort column ascending">Details</th>
+                                                                        
+                                                                        <th class="sorting_desc_disabled sorting_asc_disabled text-right sorting" tabindex="0"
+                                                                            aria-controls="datatable" rowspan="1" colspan="1" style="width: 210px;"
+                                                                            aria-label="Actions: activate to sort column ascending">Actions</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                            
+                                                                    <tr role="row" class="odd">
+                                                                        <td tabindex="0" class="sorting_1">Airi Satou</td>
+                                                                        <td>Accountant</td>
+                                                                        <td>Tokyo</td>
+                                                                        <td class="text-right">
+                                                                        
+                                                                            <a href="javascript:void(0)"
+                                                                                class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i
+                                                                                    class="tim-icons icon-pencil"></i></a>
+                                                                            <a href="javascript:void(0)"
+                                                                                class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i
+                                                                                    class="tim-icons icon-simple-remove"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                   
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <th rowspan="1" colspan="1">Name</th>
+                                                                        <th rowspan="1" colspan="1">Position</th>
+                                                                        <th rowspan="1" colspan="1">Office</th>
+                                                                        <th class="disabled-sorting text-right" rowspan="1" colspan="1">
+                                                                            Actions</th>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-5">
+                                                            <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 10 of 42
+                                                                entries</div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <div class="dataTables_paginate paging_full_numbers" id="datatable_paginate">
+                                                                <ul class="pagination">
+                                                                    <li class="paginate_button page-item first disabled" id="datatable_first"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="0" tabindex="0" class="page-link">First</a></li>
+                                                                    <li class="paginate_button page-item previous disabled" id="datatable_previous"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="1" tabindex="0" class="page-link">Previous</a>
+                                                                    </li>
+                                                                    <li class="paginate_button page-item active"><a href="#" aria-controls="datatable"
+                                                                            data-dt-idx="2" tabindex="0" class="page-link">1</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="3"
+                                                                            tabindex="0" class="page-link">2</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="4"
+                                                                            tabindex="0" class="page-link">3</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="5"
+                                                                            tabindex="0" class="page-link">4</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="6"
+                                                                            tabindex="0" class="page-link">5</a></li>
+                                                                    <li class="paginate_button page-item next" id="datatable_next"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
+                                                                    <li class="paginate_button page-item last" id="datatable_last"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="8" tabindex="0" class="page-link">Last</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="run_google_key">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-category">   Google Keys</h3>
+                                                <h3 class="card-title text-right"> 
+                                                    <button class="btn btn-primary">Add Google Key</button>    
+                                                </h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-6">
+                                                            <div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length"
+                                                                        aria-controls="datatable"
+                                                                        class="custom-select custom-select-sm form-control form-control-sm">
+                                                                        <option value="10">10</option>
+                                                                        <option value="25">25</option>
+                                                                        <option value="50">50</option>
+                                                                        <option value="-1">All</option>
+                                                                    </select> entries</label></div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-6">
+                                                            <div id="datatable_filter" class="dataTables_filter"><label><input type="search"
+                                                                        class="form-control form-control-sm" placeholder="Search records"
+                                                                        aria-controls="datatable"></label></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <table id="datatable_enviroment" class="table table-striped dataTable dtr-inline collapsed datatable_enviroment" role="grid"
+                                                                aria-describedby="datatable_info" style="width: 1424px;">
+                                                                <thead>
+                                                                    <tr role="row">
+                                                                        <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                            style="width: 286px;" aria-sort="ascending"
+                                                                            aria-label="Name: activate to sort column descending">Profile Name</th>
+                                                                        <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                            style="width: 433px;" aria-label="Position: activate to sort column ascending">Type
+                                                                        </th>
+                                                                        <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                            style="width: 211px;" aria-label="Office: activate to sort column ascending">Details</th>
+                                                                        
+                                                                        <th class="sorting_desc_disabled sorting_asc_disabled text-right sorting" tabindex="0"
+                                                                            aria-controls="datatable" rowspan="1" colspan="1" style="width: 210px;"
+                                                                            aria-label="Actions: activate to sort column ascending">Actions</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                            
+                                                                    <tr role="row" class="odd">
+                                                                        <td tabindex="0" class="sorting_1">Airi Satou</td>
+                                                                        <td>Accountant</td>
+                                                                        <td>Tokyo</td>
+                                                                        <td class="text-right">
+                                                                        
+                                                                            <a href="javascript:void(0)"
+                                                                                class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i
+                                                                                    class="tim-icons icon-pencil"></i></a>
+                                                                            <a href="javascript:void(0)"
+                                                                                class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i
+                                                                                    class="tim-icons icon-simple-remove"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                   
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <th rowspan="1" colspan="1">Name</th>
+                                                                        <th rowspan="1" colspan="1">Position</th>
+                                                                        <th rowspan="1" colspan="1">Office</th>
+                                                                        <th class="disabled-sorting text-right" rowspan="1" colspan="1">
+                                                                            Actions</th>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-5">
+                                                            <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 10 of 42
+                                                                entries</div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <div class="dataTables_paginate paging_full_numbers" id="datatable_paginate">
+                                                                <ul class="pagination">
+                                                                    <li class="paginate_button page-item first disabled" id="datatable_first"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="0" tabindex="0" class="page-link">First</a></li>
+                                                                    <li class="paginate_button page-item previous disabled" id="datatable_previous"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="1" tabindex="0" class="page-link">Previous</a>
+                                                                    </li>
+                                                                    <li class="paginate_button page-item active"><a href="#" aria-controls="datatable"
+                                                                            data-dt-idx="2" tabindex="0" class="page-link">1</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="3"
+                                                                            tabindex="0" class="page-link">2</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="4"
+                                                                            tabindex="0" class="page-link">3</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="5"
+                                                                            tabindex="0" class="page-link">4</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="6"
+                                                                            tabindex="0" class="page-link">5</a></li>
+                                                                    <li class="paginate_button page-item next" id="datatable_next"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
+                                                                    <li class="paginate_button page-item last" id="datatable_last"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="8" tabindex="0" class="page-link">Last</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="tab-pane" id="run_github">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-category"> GitHub Accounts</h3>
+                                                <h3 class="card-title text-right"> 
+                                                    <button class="btn btn-primary">Add GitHub Account</button>    
+                                                </h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-6">
+                                                            <div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length"
+                                                                        aria-controls="datatable"
+                                                                        class="custom-select custom-select-sm form-control form-control-sm">
+                                                                        <option value="10">10</option>
+                                                                        <option value="25">25</option>
+                                                                        <option value="50">50</option>
+                                                                        <option value="-1">All</option>
+                                                                    </select> entries</label></div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-6">
+                                                            <div id="datatable_filter" class="dataTables_filter"><label><input type="search"
+                                                                        class="form-control form-control-sm" placeholder="Search records"
+                                                                        aria-controls="datatable"></label></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <table id="datatable_enviroment" class="table table-striped dataTable dtr-inline collapsed datatable_enviroment" role="grid"
+                                                                aria-describedby="datatable_info" style="width: 1424px;">
+                                                                <thead>
+                                                                    <tr role="row">
+                                                                        <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                            style="width: 286px;" aria-sort="ascending"
+                                                                            aria-label="Name: activate to sort column descending">Profile Name</th>
+                                                                        <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                            style="width: 433px;" aria-label="Position: activate to sort column ascending">Type
+                                                                        </th>
+                                                                        <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                            style="width: 211px;" aria-label="Office: activate to sort column ascending">Details</th>
+                                                                        
+                                                                        <th class="sorting_desc_disabled sorting_asc_disabled text-right sorting" tabindex="0"
+                                                                            aria-controls="datatable" rowspan="1" colspan="1" style="width: 210px;"
+                                                                            aria-label="Actions: activate to sort column ascending">Actions</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                            
+                                                                    <tr role="row" class="odd">
+                                                                        <td tabindex="0" class="sorting_1">Airi Satou</td>
+                                                                        <td>Accountant</td>
+                                                                        <td>Tokyo</td>
+                                                                        <td class="text-right">
+                                                                        
+                                                                            <a href="javascript:void(0)"
+                                                                                class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i
+                                                                                    class="tim-icons icon-pencil"></i></a>
+                                                                            <a href="javascript:void(0)"
+                                                                                class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i
+                                                                                    class="tim-icons icon-simple-remove"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                   
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <th rowspan="1" colspan="1">Name</th>
+                                                                        <th rowspan="1" colspan="1">Position</th>
+                                                                        <th rowspan="1" colspan="1">Office</th>
+                                                                        <th class="disabled-sorting text-right" rowspan="1" colspan="1">
+                                                                            Actions</th>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-5">
+                                                            <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 10 of 42
+                                                                entries</div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <div class="dataTables_paginate paging_full_numbers" id="datatable_paginate">
+                                                                <ul class="pagination">
+                                                                    <li class="paginate_button page-item first disabled" id="datatable_first"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="0" tabindex="0" class="page-link">First</a></li>
+                                                                    <li class="paginate_button page-item previous disabled" id="datatable_previous"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="1" tabindex="0" class="page-link">Previous</a>
+                                                                    </li>
+                                                                    <li class="paginate_button page-item active"><a href="#" aria-controls="datatable"
+                                                                            data-dt-idx="2" tabindex="0" class="page-link">1</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="3"
+                                                                            tabindex="0" class="page-link">2</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="4"
+                                                                            tabindex="0" class="page-link">3</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="5"
+                                                                            tabindex="0" class="page-link">4</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="6"
+                                                                            tabindex="0" class="page-link">5</a></li>
+                                                                    <li class="paginate_button page-item next" id="datatable_next"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
+                                                                    <li class="paginate_button page-item last" id="datatable_last"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="8" tabindex="0" class="page-link">Last</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane row" id="run_change_password">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4 class="card-title">Change Password</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>Use the form below to change your password.</p>
+                                                <form action="#" class=" col-sm-4">
+                                                    <label></label>
+                                                    <div class="form-group">
+                                                        <input type="password" class="form-control" placeholder="Old Password">
+                                                    </div>
+                                                    <label></label>
+                                                    <div class="form-group">
+                                                        <input type="password" class="form-control" placeholder="New Password">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="password" class="form-control" placeholder="Repeat New Password">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-fill btn-primary">Change Password </button>
+                                                </form>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="run_admin">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h3 class="card-category">User Panel</h3>
+                                                <h3 class="card-title text-right"> 
+                                                    <button class="btn btn-primary">Add Usert</button>    
+                                                </h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <div id="datatable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-6">
+                                                            <div class="dataTables_length" id="datatable_length"><label>Show <select name="datatable_length"
+                                                                        aria-controls="datatable"
+                                                                        class="custom-select custom-select-sm form-control form-control-sm">
+                                                                        <option value="10">10</option>
+                                                                        <option value="25">25</option>
+                                                                        <option value="50">50</option>
+                                                                        <option value="-1">All</option>
+                                                                    </select> entries</label></div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-6">
+                                                            <div id="datatable_filter" class="dataTables_filter"><label><input type="search"
+                                                                        class="form-control form-control-sm" placeholder="Search records"
+                                                                        aria-controls="datatable"></label></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <table id="datatable_enviroment" class="table table-striped dataTable dtr-inline collapsed datatable_enviroment" role="grid"
+                                                                aria-describedby="datatable_info" style="width: 1424px;">
+                                                                <thead>
+                                                                    <tr role="row">
+                                                                        <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                            style="width: 286px;" aria-sort="ascending"
+                                                                            aria-label="Name: activate to sort column descending">Profile Name</th>
+                                                                        <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                            style="width: 433px;" aria-label="Position: activate to sort column ascending">Type
+                                                                        </th>
+                                                                        <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                                            style="width: 211px;" aria-label="Office: activate to sort column ascending">Details</th>
+                                                                        
+                                                                        <th class="sorting_desc_disabled sorting_asc_disabled text-right sorting" tabindex="0"
+                                                                            aria-controls="datatable" rowspan="1" colspan="1" style="width: 210px;"
+                                                                            aria-label="Actions: activate to sort column ascending">Actions</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                            
+                                                                    <tr role="row" class="odd">
+                                                                        <td tabindex="0" class="sorting_1">Airi Satou</td>
+                                                                        <td>Accountant</td>
+                                                                        <td>Tokyo</td>
+                                                                        <td class="text-right">
+                                                                        
+                                                                            <a href="javascript:void(0)"
+                                                                                class="btn btn-link btn-warning btn-icon btn-sm btn-neutral  edit"><i
+                                                                                    class="tim-icons icon-pencil"></i></a>
+                                                                            <a href="javascript:void(0)"
+                                                                                class="btn btn-link btn-danger btn-icon btn-sm btn-neutral remove"><i
+                                                                                    class="tim-icons icon-simple-remove"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                   
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <th rowspan="1" colspan="1">Name</th>
+                                                                        <th rowspan="1" colspan="1">Position</th>
+                                                                        <th rowspan="1" colspan="1">Office</th>
+                                                                        <th class="disabled-sorting text-right" rowspan="1" colspan="1">
+                                                                            Actions</th>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-5">
+                                                            <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">Showing 1 to 10 of 42
+                                                                entries</div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <div class="dataTables_paginate paging_full_numbers" id="datatable_paginate">
+                                                                <ul class="pagination">
+                                                                    <li class="paginate_button page-item first disabled" id="datatable_first"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="0" tabindex="0" class="page-link">First</a></li>
+                                                                    <li class="paginate_button page-item previous disabled" id="datatable_previous"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="1" tabindex="0" class="page-link">Previous</a>
+                                                                    </li>
+                                                                    <li class="paginate_button page-item active"><a href="#" aria-controls="datatable"
+                                                                            data-dt-idx="2" tabindex="0" class="page-link">1</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="3"
+                                                                            tabindex="0" class="page-link">2</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="4"
+                                                                            tabindex="0" class="page-link">3</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="5"
+                                                                            tabindex="0" class="page-link">4</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#" aria-controls="datatable" data-dt-idx="6"
+                                                                            tabindex="0" class="page-link">5</a></li>
+                                                                    <li class="paginate_button page-item next" id="datatable_next"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
+                                                                    <li class="paginate_button page-item last" id="datatable_last"><a href="#"
+                                                                            aria-controls="datatable" data-dt-idx="8" tabindex="0" class="page-link">Last</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                         
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link">
+                                Megazone
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link">
+                                About Us
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link">
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="copyright">
+                        ©
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script> made by
+                        <a href="javascript:void(0)" target="_blank">Megazone</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <div class="fixed-plugin">
+        <div class="dropdown show-dropdown">
+            <a href="#" data-toggle="dropdown">
+                <i class="fa fa-cog fa-2x"> </i>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="header-title"> Sidebar Background</li>
+                <li class="adjustments-line">
+                    <a href="javascript:void(0)" class="switch-trigger background-color">
+                        <div class="badge-colors text-center">
+                            <span class="badge filter badge-primary active" data-color="primary"></span>
+                            <span class="badge filter badge-info" data-color="blue"></span>
+                            <span class="badge filter badge-success" data-color="green"></span>
+                            <span class="badge filter badge-warning" data-color="orange"></span>
+                            <span class="badge filter badge-danger" data-color="red"></span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </a>
+                </li>
+                <li class="header-title">
+                    Sidebar Mini
+                </li>
+                <li class="adjustments-line">
+                    <div class="togglebutton switch-sidebar-mini">
+                        <span class="label-switch">OFF</span>
+                        <input type="checkbox" name="checkbox" checked class="bootstrap-switch" data-on-label=""
+                            data-off-label="" />
+                        <span class="label-switch label-right">ON</span>
+                    </div>
+                    <div class="togglebutton switch-change-color mt-3">
+                        <span class="label-switch">LIGHT MODE</span>
+                        <input type="checkbox" name="checkbox" checked class="bootstrap-switch" data-on-label=""
+                            data-off-label="" />
+                        <span class="label-switch label-right">DARK MODE</span>
+                    </div>
+                </li>
+                <li class="button-container mt-4">
+                    <a href="../docs/1.0/getting-started/introduction.html" class="btn btn-default btn-block btn-round">
+                        Documentation
+                    </a>
+                </li>
+                <li class="header-title">Thank you for 95 shares!</li>
+                <li class="button-container text-center">
+                    <button id="twitter" class="btn btn-round btn-info"><i class="fab fa-twitter"></i> &middot;
+                        45</button>
+                    <button id="facebook" class="btn btn-round btn-info"><i class="fab fa-facebook-f"></i> &middot;
+                        50</button>
+                    <br>
+                    <br>
+                    <a class="github-button" href="https://github.com/creativetimofficial/ct-black-dashboard-pro"
+                        data-icon="octicon-star" data-size="large" data-show-count="true"
+                        aria-label="Star ntkme/github-buttons on GitHub">Star</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="../assets/js/core/jquery.min.js"></script>
+    <script src="../assets/js/core/popper.min.js"></script>
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+    <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../assets/js/plugins/moment.min.js"></script>
+
+    <script src="../assets/js/plugins/bootstrap-switch.js"></script>
+
+    <script src="../assets/js/plugins/sweetalert2.min.js"></script>
+
+    <script src="../assets/js/plugins/jquery.tablesorter.js"></script>
+
+    <script src="../assets/js/plugins/jquery.validate.min.js"></script>
+
+    <script src="../assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+
+    <script src="../assets/js/plugins/bootstrap-selectpicker.js"></script>
+
+    <script src="../assets/js/plugins/bootstrap-datetimepicker.js"></script>
+
+    <script src="../assets/js/plugins/jquery.dataTables.min.js"></script>
+
+    <script src="../assets/js/plugins/bootstrap-tagsinput.js"></script>
+
+    <script src="../assets/js/plugins/jasny-bootstrap.min.js"></script>
+
+    <script src="../assets/js/plugins/fullcalendar/fullcalendar.min.js"></script>
+    <script src="../assets/js/plugins/fullcalendar/daygrid.min.js"></script>
+    <script src="../assets/js/plugins/fullcalendar/timegrid.min.js"></script>
+    <script src="../assets/js/plugins/fullcalendar/interaction.min.js"></script>
+
+    <script src="../assets/js/plugins/jquery-jvectormap.js"></script>
+
+    <script src="../assets/js/plugins/nouislider.min.js"></script>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGat1sgDZ-3y6fFe6HD7QUziVC6jlJNog"></script>
+
+    <script src="../assets/js/plugins/chartjs.min.js"></script>
+
+    <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+
+    <script src="../assets/js/black-dashboard.min.js?v=1.1.1"></script>
+
+    <!-- <script src="../assets/demo/demo.js"></script> -->
+
+    <script src="../assets/demo/jquery.sharrre.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46172202-12"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-46172202-12');
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#facebook').sharrre({
+                share: {
+                    facebook: true
+                },
+                enableHover: false,
+                enableTracking: false,
+                enableCounter: false,
+                click: function (api, options) {
+                    api.simulateClick();
+                    api.openPopup('facebook');
+                },
+                template: '<i class="fab fa-facebook-f"></i> Facebook',
+                url: 'https://demos.creative-tim.com/black-dashboard-pro/examples/dashboard.html'
+            });
+
+            $('#google').sharrre({
+                share: {
+                    googlePlus: true
+                },
+                enableCounter: false,
+                enableHover: false,
+                enableTracking: true,
+                click: function (api, options) {
+                    api.simulateClick();
+                    api.openPopup('googlePlus');
+                },
+                template: '<i class="fab fa-google-plus"></i> Google',
+                url: 'https://demos.creative-tim.com/black-dashboard-pro/examples/dashboard.html'
+            });
+
+            $('#twitter').sharrre({
+                share: {
+                    twitter: true
+                },
+                enableHover: false,
+                enableTracking: false,
+                enableCounter: false,
+                buttons: {
+                    twitter: {
+                        via: 'CreativeTim'
+                    }
+                },
+                click: function (api, options) {
+                    api.simulateClick();
+                    api.openPopup('twitter');
+                },
+                template: '<i class="fab fa-twitter"></i> Twitter',
+                url: 'https://demos.creative-tim.com/black-dashboard-pro/examples/dashboard.html'
+            });
+
+
+
+            // Facebook Pixel Code Don't Delete
+            ! function (f, b, e, v, n, t, s) {
+                if (f.fbq) return;
+                n = f.fbq = function () {
+                    n.callMethod ?
+                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq) f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = '2.0';
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window,
+                document, 'script', '');
+
+            try {
+                fbq('init', '111649226022273');
+                fbq('track', "PageView");
+
+            } catch (err) {
+                console.log('Facebook Track Error:', err);
+            }
+
+        });
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=111649226022273&ev=PageView&noscript=1" />
+    </noscript>
+    <script>
+        $(document).ready(function () {
+            $().ready(function () {
+                $sidebar = $('.sidebar');
+                $navbar = $('.navbar');
+                $main_panel = $('.main-panel');
+
+                $full_page = $('.full-page');
+
+                $sidebar_responsive = $('body > .navbar-collapse');
+                sidebar_mini_active = true;
+                white_color = false;
+
+                window_width = $(window).width();
+
+                fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+                $('.fixed-plugin a').click(function (event) {
+                    if ($(this).hasClass('switch-trigger')) {
+                        if (event.stopPropagation) {
+                            event.stopPropagation();
+                        } else if (window.event) {
+                            window.event.cancelBubble = true;
+                        }
+                    }
+                });
+
+                $('.fixed-plugin .background-color span').click(function () {
+                    $(this).siblings().removeClass('active');
+                    $(this).addClass('active');
+
+                    var new_color = $(this).data('color');
+
+                    if ($sidebar.length != 0) {
+                        $sidebar.attr('data', new_color);
+                    }
+
+                    if ($main_panel.length != 0) {
+                        $main_panel.attr('data', new_color);
+                    }
+
+                    if ($full_page.length != 0) {
+                        $full_page.attr('filter-color', new_color);
+                    }
+
+                    if ($sidebar_responsive.length != 0) {
+                        $sidebar_responsive.attr('data', new_color);
+                    }
+                });
+
+                $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function () {
+                    var $btn = $(this);
+
+                    if (sidebar_mini_active == true) {
+                        $('body').removeClass('sidebar-mini');
+                        sidebar_mini_active = false;
+                        blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
+                    } else {
+                        $('body').addClass('sidebar-mini');
+                        sidebar_mini_active = true;
+                        blackDashboard.showSidebarMessage('Sidebar mini activated...');
+                    }
+
+                    // we simulate the window Resize so the charts will get updated in realtime.
+                    var simulateWindowResize = setInterval(function () {
+                        window.dispatchEvent(new Event('resize'));
+                    }, 180);
+
+                    // we stop the simulation of Window Resize after the animations are completed
+                    setTimeout(function () {
+                        clearInterval(simulateWindowResize);
+                    }, 1000);
+                });
+
+                $('.switch-change-color input').on("switchChange.bootstrapSwitch", function () {
+                    var $btn = $(this);
+
+                    if (white_color == true) {
+
+                        $('body').addClass('change-background');
+                        setTimeout(function () {
+                            $('body').removeClass('change-background');
+                            $('body').removeClass('white-content');
+                        }, 900);
+                        white_color = false;
+                    } else {
+
+                        $('body').addClass('change-background');
+                        setTimeout(function () {
+                            $('body').removeClass('change-background');
+                            $('body').addClass('white-content');
+                        }, 900);
+
+                        white_color = true;
+                    }
+
+
+                });
+
+                $('.light-badge').click(function () {
+                    $('body').addClass('white-content');
+                });
+
+                $('.dark-badge').click(function () {
+                    $('body').removeClass('white-content');
+                });
+            });
+        });
+    </script>
+    <!-- <script>
+    $(document).ready(function () {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initDashboardPageCharts();
+
+      demo.initVectorMap();
+
+    });
+  </script> -->
+</body>
+
+</html>
